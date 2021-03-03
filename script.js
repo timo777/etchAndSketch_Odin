@@ -1,11 +1,18 @@
 const main = document.querySelector("#main");
 const button = document.querySelector("#newGrid")
-for (let i = 0; i != 16 * 16; i++) {
-    const div = document.createElement('div');
-    div.classList.add('jsDiv')
-    div.addEventListener("mouseover", hoverColor);
-    main.appendChild(div);
 
+function setDefault() {
+    main.style.gridTemplateColumns = `repeat(${16}, 1fr)`;
+    for (let i = 0; i != 16 * 16; i++) {
+        const div = document.createElement('div');
+        div.classList.add('jsDiv')
+        div.addEventListener("mouseover", hoverColor);
+        main.appendChild(div);
+
+    }
+}
+window.onload = function() {
+    setDefault();
 }
 
 
@@ -33,13 +40,13 @@ function changeGrid() {
     if (demands <= 0 || demands > 100) {
         alert("not the right number");
     } else {
-        clearGrid();
+        removeGrid();
         newGridSize(demands);
     }
 }
 
 
-function clearGrid() {
+function removeGrid() {
     const gridArray = Array.from(main.childNodes);
     gridArray.forEach((element) => {
         main.removeChild(element);
