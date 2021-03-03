@@ -14,5 +14,12 @@ body {}
 }
 
 .jsDiv {
+    background: "white";
     border: 1px solid var(--bordercolor);
 }
+
+button {
+    position: center;
+}
+
+button:hover {}
