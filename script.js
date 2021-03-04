@@ -17,10 +17,10 @@ window.onload = function() {
 
 
 function hoverColor(e) {
-    const randomR = Math.floor(Math.random() * 256);
-    const randomG = Math.floor(Math.random() * 256);
-    const randomB = Math.floor(Math.random() * 256);
-    e.target.style.backgroundColor = `rgb(${randomR}, ${randomG}, ${randomB})`;
+    const red = Math.floor(Math.random() * 256);
+    const green = Math.floor(Math.random() * 256);
+    const blue = Math.floor(Math.random() * 256);
+    e.target.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
 }
 
 function newGridSize(size) {
